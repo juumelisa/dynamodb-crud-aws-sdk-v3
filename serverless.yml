@@ -58,3 +58,9 @@ functions:
       - http:
           path: /update
           method: post
+  batchWrite:
+    handler: functions/batchWrite.handler
+    events:
+      - http:
+          path: /batchWrite
+          method: post

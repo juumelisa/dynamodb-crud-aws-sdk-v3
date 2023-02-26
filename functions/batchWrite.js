@@ -1,11 +1,11 @@
 'use strict';
 
-const { updateData } = require("../lib/ddb");
+const { createData, batchWriteData } = require("../lib/ddb");
 
 module.exports.handler = async(event) => {
   try{
     const body = JSON.parse(event.body);
-    const result = await updateData(body);
+    const result = await batchWriteData(body.propsA, body.propsB);
     return{
       statusCode: 200,
       body: JSON.stringify(
