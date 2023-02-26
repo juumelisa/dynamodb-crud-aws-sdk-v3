@@ -52,3 +52,9 @@ functions:
       - http:
           path: /delete
           method: post
+  update:
+    handler: functions/update.handler
+    events:
+      - http:
+          path: /update
+          method: post
