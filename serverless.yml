@@ -7,9 +7,9 @@ provider:
   region: ap-southeast-1
 
 functions:
-  api:
-    handler: index.handler
+  create:
+    handler: functions/create.handler
     events:
-      - httpApi:
-          path: /
-          method: get
+      - http:
+          path: /create
+          method: post
