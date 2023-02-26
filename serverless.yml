@@ -13,3 +13,15 @@ functions:
       - http:
           path: /create
           method: post
+  get:
+    handler: functions/get.handler
+    events:
+      - http:
+          path: /get
+          method: post
+  query:
+    handler: functions/query.handler
+    events:
+      - http:
+          path: /query
+          method: post
