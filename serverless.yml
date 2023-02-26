@@ -25,3 +25,9 @@ functions:
       - http:
           path: /query
           method: post
+  scan:
+    handler: functions/scan.handler
+    events:
+      - http:
+          path: /scan
+          method: post
